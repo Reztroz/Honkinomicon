@@ -23,7 +23,7 @@ CreatureList["dire goose"] = {
 	Skills : {
 		"Perception" : 4,
 		"Intimidation" : 2,
-	}
+	},
 	actions : [{
 		name : "Multiattack",
 		description : "The goose makes two beak attacks.",
@@ -44,4 +44,4 @@ CreatureList["dire goose"] = {
 		name : "Savage Attacker(1/Short Rest)",
 		description : "When the goose rolls damage for a melee weapon attack, it can reroll the attack's damage dice and use either total.",
 	}],
-}
+};
