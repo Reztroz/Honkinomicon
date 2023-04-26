@@ -20,6 +20,13 @@ CreatureList["dire goose"] = {
 		damage : [1, 8, "piercing"],
 		range : "Melee (5 ft)",
 		description : ""
+	},
+	{
+		name: "Honk(1/Day)",
+		ability : 0,
+		damage : [0, 0, ""],
+		range : "15 ft",
+		description : "The goose honks in a 15-foot-radius sphere. Make a DC 12 Wisdom saving throw or be frightened 1 min."
 	}],
 	skills : {
 		"perception" : 4,
@@ -28,13 +35,9 @@ CreatureList["dire goose"] = {
 	actions : [{
 		name : "Multiattack",
 		description : "The goose makes two beak attacks."
-	},
-	{
-		name: "Honk(1/Day).",
-		description : "The goose emits a terrifying honk in a 15-foot-radius sphere. Creatures that can hear the goose and are aware of it must make a DC 12 Wisdom saving throw or be frightened of the goose for 1 minute."
 	}],
-	features : [{
-		name: " Fearless Fowl",
+	traits : [{
+		name : "Fearless Fowl",
 		description : "The goose has the advantage on saving throws against being frightened"
 	},
 	{

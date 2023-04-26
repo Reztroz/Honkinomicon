@@ -31,7 +31,7 @@ AddSubClass(
 				source : ["CoH",2]
 				minlevel : 2,
 				description : desc([
-					"As a bonus action, I assume the shape of a beast I have seen before with these rules:",
+					"As an action, I assume the shape of a beast I have seen before with these rules:",
 					" \u2022 I gain all its game statistics except Intelligence, Wisdom, or Charisma",
 					" \u2022 I get its skill/saving throw prof. while keeping my own, using whichever is higher",
 					" \u2022 I assume the beast's HP and HD; I get mine back when I revert back",
@@ -53,7 +53,44 @@ AddSubClass(
 				action : ["bonus action", " (start/stop)"],
 				eval : function() {
 					processActions(false, "Druid: Wild Shape", ClassList.druid.features["subclassfeature2.wild shape"].action, "Wild Shape");
+			},
+			"subclassfeature2.1" : {
+				name : "Combat Goose Shape",
+				description : desc([
+					"\u2022 I can use Wild Shape as a Bonus Action",
+					"\u2022 I gain additional Wild Shape options, that I do not have to have seen before."
+				])		
+			},
+			"subclassfeature3" : {
+				name : "Circle Spells",
+				source : ["CoH",2],
+				minlevel : 3,
+				description: desc([
+					"My mystical connection with my Goose Circle infuses me with the ability to cast certain spells",
+					"These are always prepared, but don't count against the number of spells I can prepare",
+				]),
+				spellcastingExtra : ["illusory gander","elemental goose","hada's harrowing honks","gosling gaggle"]
+			},
+			"subclassfeature6" : {
+				name : "Theiving Pecks",
+				minlevel : 3,
+				description : (),
+			},
+			"subclassfeature10" : {
+				name : "Peace Was Never An Option",
+				minlevel : 10,
+				description : ([
+					"u\2022 I can't be charmed or frightened.",
+					"u\2022 I gain resistance to bludgeoning, piercing and slashing damage in goose form.",
+					"u\2022 When using a goose form's Honk action, creatures have disadvantage on saving throws against it."
+				]),
+			},
+			"subclassfeature14" : {
+				name : "Honk Of Defiance",
+				minlevel : 14,
+				description : "",
 			}
+			
 CreatureList["pond goose"] = {
 	name : "Pond Goose",
 	source : ["CoH",5],
@@ -75,11 +112,21 @@ CreatureList["pond goose"] = {
 		ability : 2,
 		damage : [1, 6, "piercing"],
 		range : "Melee (5 ft)",
+	},
+	{
+		name: "Honk(1/Day)",
+		ability : 0,
+		damage : [0, 0, ""],
+		range : "15 ft",
+		description : "The goose honks in a 15-foot-radius sphere. Make a DC 12 Wisdom saving throw or be frightened 1 min."
 	}],
 	skills : {
 		"perception" : 2,
 	},
-		
+	traits : [{
+		name : "Hold Breath",
+		description : "The goose can hold its breath for 10 minutes while underwater"
+	}],
 };
 CreatureList["dire goose"] = {
 	name : "Dire Goose",
@@ -102,6 +149,14 @@ CreatureList["dire goose"] = {
 		ability : 1,
 		damage : [1, 8, "piercing"],
 		range : "Melee (5 ft)",
+		description : ""
+	},
+	{
+		name: "Honk(1/Day)",
+		ability : 0,
+		damage : [0, 0, ""],
+		range : "15 ft",
+		description : "The goose honks in a 15-foot-radius sphere. Make a DC 12 Wisdom saving throw or be frightened 1 min."
 	}],
 	skills : {
 		"perception" : 4,
@@ -110,13 +165,9 @@ CreatureList["dire goose"] = {
 	actions : [{
 		name : "Multiattack",
 		description : "The goose makes two beak attacks."
-	},
-	{
-		name: "Honk(1/Day).",
-		description : "The goose emits a terrifying honk in a 15-foot-radius sphere. Creatures that can hear the goose and are aware of it must make a DC 12 Wisdom saving throw or be frightened of the goose for 1 minute."
 	}],
-	features : [{
-		name: " Fearless Fowl",
+	traits : [{
+		name : "Fearless Fowl",
 		description : "The goose has the advantage on saving throws against being frightened"
 	},
 	{
