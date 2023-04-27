@@ -179,3 +179,46 @@ CreatureList["dire goose"] = {
 		description : "When the goose rolls damage for a melee weapon attack, it can reroll the attack's damage dice and use either total."
 	}],
 };
+SpellsList["distracting honk"] = {
+	name : "Distracting Honk",
+	nameShort : "Distr. Honk",
+	source : ["CoH",3],
+	defaultExcluded : true,
+	classes : ["bard", "druid", "warlock", "wizard"],
+	level : 0,
+	time : "1 a",
+	range : "60 ft",
+	components : "V",
+	duration : "Instantaneous",
+	save : "Wis",
+	descriptionCantripDie : "1 creature Wis Save or `CD`d6 Thunder dmg and disadvantage on next ability check till end of next turn",
+	descriptionFull : "I emit a magical honk at 1 creature in range. I don't need to see the creature, only know it exists and is in range of the spell. If it hears me it must succed on a Wisdom saving throw or take 1d6 thunder damage, and has disadvantage on the next ability check before the end of it's next turn. Damge increases by 1d6 at 5th, 11th, and 17th levels"
+};
+SpellsList["gooseberry"] = {
+	name : "Gooseberry",
+	source : ["CoH",3],
+	defaultExcluded : true,
+	classes : ["druid", "ranger", "Warlock"],
+	level : 1,
+	school : "Trans",
+	time : "1 min",
+	range : "Touch"
+	components : "V,S,M",
+	compMaterial : "3 berries, which the spell consumes",
+	duration : "Instantaneous",
+	description : "3 berries; lasts 8 hours; 1 a to eat berry; +1 to atk 1min; can only honk; can't concentrate; eat 3+ berries in 24h become Pond Goose 1h",
+	descriptionFull : "I infuse 3 berries with fowlish magic. The berries retain the magic for 8 hours or until consumed, after which they vanish in a puff of feathers. 1a to eat 1 berry. Eating a berry instills in the target a brief surge of goosely rage, granting +1 to atk for 1 min. Can only honk and can't concentrate on spells for duration. Ends early if they do not attack for 1 turn or fall unconcious. if they eat 3+ berries in 24h they transform into a Pond Goose for 1h. After reverting the creature is immune to Gooseberries for 24h"
+};
+SpellsList["illusory gander"] = {
+	name : "Illusory Gander",
+	source : ["CoH",3],
+	defaultExcluded : true,
+	classes : ["bard", "druid", "ranger", "sorcerer", "warlock", "wizard"],
+	level : 2,
+	school : "Illus",
+	time : "1 a",
+	range : "30 ft",
+	components : "V,S",
+	duration : "concentration, up to 1 h",
+	description : ""
+};
