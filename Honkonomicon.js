@@ -222,3 +222,9 @@ SpellsList["illusory gander"] = {
 	duration : "concentration, up to 1 h",
 	description : ""
 };
+SpellsList["elemental goose"] = {
+	name : "Elemental Goose",
+	source : ["CoH",3],
+	defaultExcluded : true,
+	classes : []
+};
