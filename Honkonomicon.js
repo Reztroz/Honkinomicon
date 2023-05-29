@@ -21,14 +21,14 @@ AddSubClass(
 		source : ["CoH",2],
 		features : {
 			"subclassfeature2" : {
-				name : "Circle Forms"
-				source : ["CoH",2]
-				minlevel : 2
-				description : desc("")
-			}
+				name : "Circle Forms",
+				source : ["CoH",2],
+				minlevel : 2,
+				description : desc(""),
+			},
 			"subclassfeature2.wild shape" : {
-				name : "Combat Goose Shape"
-				source : ["CoH",2]
+				name : "Combat Goose Shape",
+				source : ["CoH",2],
 				minlevel : 2,
 				description : desc([
 					"As an action, I assume the shape of a beast I have seen before with these rules:",
@@ -38,7 +38,7 @@ AddSubClass(
 					" \u2022 I can't cast spells in beast form, but transforming doesn't break concentration",
 					" \u2022 I retain features from class, race, etc., but I don't retain special senses",
 					" \u2022 I can choose whether equipment falls to the ground, merges, or stays worn",
-					" \u2022 I revert if out of time or unconscious; if KOd by damage, excess damage carries over"
+					" \u2022 I revert if out of time or unconscious; if KOd by damage, excess damage carries over",
 					" \u2022 I gain additional Wild Shape options, that I do not have to have seen before."
 				]),
 				usages : [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, "\u221E\xD7 per "],
@@ -53,6 +53,7 @@ AddSubClass(
 				action : ["bonus action", " (start/stop)"],
 				eval : function() {
 					processActions(false, "Druid: Wild Shape", ClassList.druid.features["subclassfeature2.wild shape"].action, "Wild Shape");
+			},
 			},
 			"subclassfeature2.1" : {
 				name : "Combat Goose Shape",
@@ -74,7 +75,7 @@ AddSubClass(
 			"subclassfeature6" : {
 				name : "Theiving Pecks",
 				minlevel : 3,
-				description : (),
+				description : (""),
 			},
 			"subclassfeature10" : {
 				name : "Peace Was Never An Option",
@@ -90,7 +91,8 @@ AddSubClass(
 				minlevel : 14,
 				description : "",
 			}
-			
+		}
+	})	
 CreatureList["pond goose"] = {
 	name : "Pond Goose",
 	source : ["CoH",5],
@@ -202,7 +204,7 @@ SpellsList["gooseberry"] = {
 	level : 1,
 	school : "Trans",
 	time : "1 min",
-	range : "Touch"
+	range : "Touch",
 	components : "V,S,M",
 	compMaterial : "3 berries, which the spell consumes",
 	duration : "Instantaneous",
